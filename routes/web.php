@@ -19,6 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::resource('post', PostController::class);
 Route::resource('student', StudentController::class);
