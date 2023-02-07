@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use App\Models\Student;
+use Illuminate\Support\Facades\Log;
 
 class StudentRepository
 {
@@ -26,6 +27,7 @@ class StudentRepository
 
     public function save($data)
     {
+        Log::info("this data ", $data);
         $student = new $this->student;
 
         $student->nim = $data['nim'];
