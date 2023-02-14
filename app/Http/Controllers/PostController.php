@@ -10,6 +10,7 @@ class PostController extends Controller
 {
     public function index()
     {
+       // xdebug_info();
         $posts = Post::latest()->get();
         return view('posts.index', compact('posts'));
     }
